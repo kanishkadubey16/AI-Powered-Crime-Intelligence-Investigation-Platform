@@ -1,5 +1,13 @@
 require("dotenv").config();
 const express = require("express");
+
+// Catch unhandled promise rejections so server never crashes
+process.on("unhandledRejection", (err) => {
+  console.error("[UnhandledRejection]", err.message);
+});
+process.on("uncaughtException", (err) => {
+  console.error("[UncaughtException]", err.message);
+});
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
@@ -17,9 +25,6 @@ const reportsRoutes = require("./routes/reportsRoutes");
 const aiRoutes = require("./routes/aiRoutes");
 
 const app = express();
-
-// ── Connect to MongoDB ──────────────────────────────────────────────────────
-connectDB();
 
 // ── Security & Utility Middleware ───────────────────────────────────────────
 app.use(helmet());
@@ -82,10 +87,22 @@ app.use((req, res) => {
 // ── Centralized Error Handler ────────────────────────────────────────────────
 app.use(errorHandler);
 
-// ── Start Server ─────────────────────────────────────────────────────────────
+// ── Start Server (only after DB is ready) ────────────────────────────────────
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT} [${process.env.NODE_ENV}]`);
-});
+
+const startServer = async () => {
+  await connectDB();
+
+  const mongoose = require("mongoose");
+  console.log("[DB] host:", mongoose.connection.host);
+  console.log("[DB] name:", mongoose.connection.name);
+  console.log("[DB] databaseName:", mongoose.connection.db.databaseName);
+
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT} [${process.env.NODE_ENV}]`);
+  });
+};
+
+startServer();
 
 module.exports = app;
