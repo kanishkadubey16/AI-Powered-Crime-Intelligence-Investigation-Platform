@@ -1,13 +1,12 @@
-const { GoogleGenerativeAI } = require("@google/genai");
+const { GoogleGenAI } = require("@google/genai");
 
-const genai = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const runAgent = async (agentName, systemPrompt, input) => {
-  const model = genai.getGenerativeModel({ model: "gemini-1.5-flash" });
   const prompt = `${systemPrompt}\n\nInput:\n${JSON.stringify(input, null, 2)}\n\nRespond with a JSON object only.`;
   try {
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
+    const result = await genai.models.generateContent({ model: "gemini-2.0-flash", contents: prompt });
+    const text = result.text;
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     return jsonMatch ? JSON.parse(jsonMatch[0]) : { error: "No JSON returned", raw: text };
   } catch (err) {
