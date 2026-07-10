@@ -1,0 +1,1001 @@
+CrimeType,Severity,EvidenceCount,WitnessCount,OfficerWorkload,PreviousSimilarCases,InvestigationDays
+Robbery,1,23,8,8,14,3
+Domestic Violence,1,18,13,2,1,3
+Robbery,2,7,0,18,12,53
+Assault,2,14,8,1,48,3
+Murder,4,10,8,5,13,116
+Robbery,4,3,11,12,38,31
+Fraud,1,23,14,18,7,26
+Domestic Violence,3,26,11,19,12,9
+Robbery,1,21,7,25,18,46
+Robbery,4,8,14,21,23,48
+Murder,3,11,6,22,17,106
+Robbery,5,20,5,18,46,36
+Cyber Crime,2,14,12,9,40,4
+Kidnapping,1,7,1,11,25,44
+Fraud,1,6,10,7,41,6
+Drug Trafficking,2,8,4,8,47,32
+Domestic Violence,5,8,13,19,25,24
+Murder,5,15,2,25,3,275
+Robbery,2,20,5,22,27,31
+Drug Trafficking,5,8,0,22,46,121
+Robbery,5,24,8,25,41,52
+Murder,4,0,8,17,48,144
+Murder,5,29,3,21,19,178
+Cyber Crime,2,11,5,18,49,33
+Domestic Violence,1,19,10,16,1,11
+Fraud,2,1,7,19,5,83
+Robbery,4,26,2,25,34,55
+Drug Trafficking,5,5,8,17,38,103
+Assault,2,29,6,23,19,20
+Kidnapping,4,28,14,4,15,45
+Cyber Crime,1,10,0,19,35,49
+Robbery,1,7,2,2,21,3
+Robbery,5,7,8,22,31,74
+Drug Trafficking,2,25,15,14,12,23
+Robbery,1,21,13,12,27,3
+Theft,1,1,12,24,21,47
+Robbery,2,6,6,18,28,42
+Drug Trafficking,2,27,2,15,35,38
+Robbery,1,20,0,3,48,3
+Drug Trafficking,4,6,12,2,10,49
+Assault,1,12,8,15,18,11
+Domestic Violence,4,4,6,10,13,33
+Theft,5,23,1,24,20,68
+Domestic Violence,5,5,1,17,5,69
+Murder,1,19,2,22,15,54
+Cyber Crime,5,19,1,20,5,123
+Assault,5,18,10,9,13,20
+Fraud,4,4,9,15,20,73
+Robbery,1,14,3,3,34,3
+Kidnapping,1,28,7,12,18,21
+Murder,4,26,9,20,41,84
+Domestic Violence,3,29,3,5,16,3
+Robbery,1,23,4,9,18,3
+Cyber Crime,3,16,15,9,3,17
+Robbery,4,26,8,2,0,3
+Fraud,2,23,14,18,45,19
+Assault,5,0,3,3,44,33
+Kidnapping,5,17,4,14,8,113
+Theft,3,11,1,12,13,27
+Kidnapping,5,28,13,20,47,77
+Murder,2,27,5,6,26,44
+Kidnapping,4,25,7,9,10,73
+Robbery,4,27,1,16,14,45
+Kidnapping,3,26,7,8,1,60
+Cyber Crime,4,10,8,3,49,21
+Assault,5,10,0,4,16,43
+Murder,5,30,8,2,6,97
+Kidnapping,4,19,3,13,36,78
+Cyber Crime,3,1,13,1,33,11
+Cyber Crime,3,13,2,22,21,66
+Kidnapping,1,23,9,17,19,31
+Fraud,5,4,6,14,42,87
+Assault,2,19,9,13,35,3
+Cyber Crime,4,25,10,15,28,35
+Drug Trafficking,2,16,15,24,10,54
+Kidnapping,1,26,7,22,19,41
+Cyber Crime,2,4,0,2,15,36
+Robbery,4,13,6,23,44,53
+Assault,4,12,7,5,41,3
+Robbery,4,7,5,23,33,48
+Drug Trafficking,1,17,7,4,29,3
+Domestic Violence,5,19,10,25,28,47
+Domestic Violence,4,26,14,6,47,3
+Cyber Crime,3,24,15,21,15,31
+Fraud,4,2,9,8,17,58
+Robbery,2,4,7,13,44,27
+Murder,2,2,13,14,21,62
+Cyber Crime,4,12,0,25,36,91
+Assault,4,0,11,10,48,15
+Assault,5,23,7,16,14,46
+Fraud,4,15,0,13,21,70
+Murder,4,29,4,20,34,89
+Theft,4,18,0,3,41,3
+Murder,1,8,12,11,13,51
+Drug Trafficking,3,10,12,9,48,34
+Robbery,4,0,1,12,14,60
+Robbery,1,24,0,8,12,5
+Cyber Crime,2,15,3,19,13,45
+Drug Trafficking,3,24,11,6,38,9
+Robbery,2,30,9,4,37,3
+Theft,3,18,12,13,45,3
+Cyber Crime,1,22,9,22,38,29
+Robbery,5,25,1,12,34,32
+Domestic Violence,3,0,13,16,6,34
+Assault,3,20,14,23,9,23
+Fraud,5,25,15,15,27,72
+Fraud,3,27,7,3,17,12
+Drug Trafficking,5,19,12,11,1,81
+Drug Trafficking,3,5,15,7,22,37
+Fraud,5,0,6,3,15,76
+Assault,4,17,7,23,30,41
+Theft,1,9,7,13,44,3
+Cyber Crime,3,21,11,16,35,22
+Domestic Violence,3,11,14,9,19,3
+Fraud,2,3,6,11,7,53
+Murder,2,6,15,9,46,26
+Domestic Violence,5,9,3,7,18,26
+Theft,5,4,8,2,3,21
+Domestic Violence,3,22,4,21,48,12
+Fraud,4,15,14,11,11,55
+Theft,3,30,15,4,4,3
+Theft,2,4,9,3,15,3
+Robbery,5,24,13,20,38,36
+Domestic Violence,4,14,14,10,37,3
+Assault,3,18,1,20,47,40
+Cyber Crime,3,21,2,6,15,29
+Murder,5,2,5,1,26,112
+Fraud,1,7,9,23,18,62
+Drug Trafficking,1,21,7,9,50,3
+Cyber Crime,4,3,7,21,9,75
+Fraud,2,2,1,6,50,32
+Fraud,4,3,14,23,19,118
+Assault,3,16,15,15,5,11
+Kidnapping,5,8,0,3,14,94
+Theft,3,18,1,25,48,43
+Drug Trafficking,3,5,13,21,31,82
+Robbery,4,11,13,11,20,20
+Kidnapping,4,22,15,10,42,36
+Assault,5,1,14,3,20,17
+Assault,5,26,0,22,34,58
+Drug Trafficking,4,1,6,17,23,89
+Drug Trafficking,1,6,8,18,8,49
+Fraud,4,28,15,4,1,28
+Cyber Crime,2,9,0,18,26,58
+Robbery,2,26,3,15,7,21
+Fraud,5,22,8,14,30,73
+Drug Trafficking,2,14,4,13,12,60
+Murder,1,8,13,11,50,26
+Domestic Violence,3,26,0,10,46,3
+Drug Trafficking,2,14,15,12,21,31
+Domestic Violence,5,12,14,11,12,16
+Assault,2,27,13,2,20,3
+Drug Trafficking,4,12,4,16,2,126
+Kidnapping,1,27,14,4,33,3
+Drug Trafficking,1,23,4,14,41,21
+Fraud,3,19,12,21,5,60
+Kidnapping,5,12,10,21,45,141
+Domestic Violence,1,19,2,8,40,3
+Fraud,2,23,2,14,6,46
+Robbery,4,5,9,1,2,15
+Kidnapping,1,9,11,12,27,34
+Murder,2,5,2,20,24,118
+Cyber Crime,4,29,4,8,29,24
+Theft,4,28,9,22,34,16
+Murder,1,14,11,19,19,51
+Fraud,4,27,9,7,24,29
+Drug Trafficking,1,7,12,19,22,26
+Fraud,1,26,12,9,0,3
+Theft,5,23,15,10,49,3
+Kidnapping,2,20,6,20,16,52
+Murder,1,28,1,10,50,19
+Murder,1,29,9,11,47,13
+Assault,2,6,4,18,23,28
+Murder,3,29,15,10,47,32
+Kidnapping,1,14,2,5,48,19
+Assault,5,11,2,13,0,56
+Fraud,5,3,14,12,43,80
+Assault,3,3,7,16,1,43
+Domestic Violence,3,29,7,21,4,19
+Fraud,4,3,4,2,2,59
+Fraud,4,3,3,8,34,79
+Domestic Violence,4,18,4,14,41,16
+Robbery,4,19,13,9,2,15
+Drug Trafficking,2,27,11,4,43,3
+Kidnapping,5,28,11,2,25,60
+Drug Trafficking,1,21,6,21,40,51
+Theft,1,25,10,8,8,3
+Domestic Violence,2,18,6,8,21,3
+Murder,5,0,8,5,8,113
+Robbery,1,4,0,12,50,22
+Cyber Crime,5,10,0,6,16,93
+Domestic Violence,1,23,2,16,28,9
+Kidnapping,5,18,3,15,32,125
+Domestic Violence,3,14,0,2,30,3
+Assault,4,21,3,16,45,26
+Robbery,3,19,4,3,8,4
+Fraud,5,20,10,13,38,60
+Assault,1,25,3,21,41,15
+Domestic Violence,2,13,14,8,26,3
+Assault,1,10,13,11,42,3
+Fraud,3,30,4,22,30,69
+Robbery,4,3,11,5,35,17
+Theft,5,30,10,22,7,25
+Assault,1,30,9,20,19,6
+Kidnapping,1,18,6,5,42,4
+Kidnapping,5,11,3,25,17,165
+Cyber Crime,4,27,0,20,42,65
+Murder,3,22,9,11,22,59
+Theft,2,27,4,19,42,7
+Theft,1,23,6,13,26,3
+Drug Trafficking,3,5,11,10,46,34
+Robbery,1,4,5,25,39,67
+Theft,1,8,14,22,27,18
+Fraud,2,24,3,12,27,29
+Robbery,3,21,15,17,42,3
+Theft,1,6,9,7,49,3
+Murder,3,9,10,4,0,60
+Murder,4,17,7,17,35,117
+Kidnapping,1,12,1,14,1,57
+Kidnapping,5,13,12,23,40,129
+Assault,3,3,12,1,20,3
+Drug Trafficking,3,2,13,4,15,50
+Assault,5,12,2,13,19,51
+Murder,1,16,3,17,32,53
+Cyber Crime,3,11,4,8,6,45
+Murder,1,5,15,15,48,42
+Drug Trafficking,5,20,10,21,20,111
+Drug Trafficking,3,25,8,19,3,65
+Kidnapping,5,2,9,15,28,148
+Fraud,1,20,2,20,38,42
+Domestic Violence,4,14,1,15,36,27
+Drug Trafficking,5,4,1,15,6,119
+Kidnapping,1,16,5,2,15,11
+Domestic Violence,5,19,5,12,23,11
+Fraud,4,13,10,22,38,97
+Kidnapping,1,10,3,18,43,56
+Assault,3,8,4,11,5,31
+Kidnapping,3,30,12,5,38,9
+Robbery,3,17,12,21,50,20
+Domestic Violence,1,20,13,17,23,3
+Theft,3,9,5,7,21,11
+Cyber Crime,2,4,2,10,50,31
+Robbery,5,24,1,22,21,79
+Assault,2,5,5,23,49,37
+Murder,4,1,13,12,43,101
+Fraud,4,7,7,10,50,36
+Drug Trafficking,2,11,14,15,49,27
+Domestic Violence,4,30,5,7,38,3
+Murder,3,1,15,12,35,95
+Domestic Violence,1,9,2,25,10,50
+Fraud,4,28,4,14,5,73
+Drug Trafficking,3,29,0,14,3,57
+Assault,5,11,7,13,5,47
+Robbery,3,25,4,5,2,5
+Fraud,4,22,4,25,45,68
+Robbery,1,8,6,5,35,3
+Domestic Violence,4,3,9,8,19,18
+Drug Trafficking,1,3,15,20,34,45
+Theft,5,18,7,23,9,55
+Kidnapping,2,18,13,6,42,9
+Robbery,5,11,2,17,34,36
+Domestic Violence,1,12,15,2,40,3
+Assault,3,8,0,12,50,28
+Robbery,5,23,10,5,2,19
+Kidnapping,5,10,5,25,43,114
+Murder,2,2,14,2,18,44
+Cyber Crime,1,25,6,2,20,3
+Domestic Violence,4,8,1,25,41,55
+Cyber Crime,3,11,1,21,21,71
+Assault,4,23,14,13,21,6
+Murder,4,22,15,12,33,84
+Assault,1,13,5,18,18,30
+Kidnapping,1,2,10,22,18,64
+Assault,2,22,14,12,28,3
+Theft,3,19,13,9,40,3
+Robbery,4,11,5,1,9,16
+Drug Trafficking,1,4,2,8,49,26
+Theft,5,4,14,12,23,23
+Drug Trafficking,1,18,4,17,23,33
+Cyber Crime,1,0,5,16,33,51
+Assault,5,3,8,25,16,79
+Fraud,4,6,3,5,4,65
+Drug Trafficking,2,28,14,3,43,3
+Kidnapping,1,17,9,10,10,24
+Murder,3,16,7,4,12,65
+Drug Trafficking,1,11,11,15,35,24
+Murder,5,28,2,3,19,97
+Drug Trafficking,5,13,13,19,4,128
+Murder,3,20,2,15,29,83
+Domestic Violence,5,5,4,14,32,35
+Theft,1,16,4,10,10,8
+Cyber Crime,3,30,9,3,16,3
+Cyber Crime,5,8,4,21,19,102
+Murder,5,30,4,6,42,108
+Kidnapping,5,1,0,3,2,159
+Fraud,2,24,13,20,40,24
+Theft,4,28,9,21,19,16
+Assault,3,14,2,23,3,63
+Murder,4,13,15,15,13,106
+Kidnapping,3,12,4,25,23,109
+Domestic Violence,5,3,10,8,29,20
+Murder,1,1,9,13,39,60
+Assault,2,30,5,11,36,3
+Murder,4,16,14,16,19,99
+Drug Trafficking,1,2,12,17,29,47
+Kidnapping,1,1,9,16,38,48
+Drug Trafficking,3,17,0,4,27,42
+Kidnapping,4,11,1,13,3,121
+Domestic Violence,2,11,9,3,24,3
+Fraud,5,21,3,5,6,75
+Assault,3,25,10,18,23,13
+Domestic Violence,4,16,1,2,2,7
+Murder,3,25,15,17,29,76
+Murder,3,29,10,6,25,53
+Fraud,5,10,15,23,36,92
+Kidnapping,3,21,3,14,37,75
+Fraud,1,19,15,9,41,3
+Cyber Crime,1,18,15,6,33,3
+Assault,2,26,7,2,36,3
+Theft,4,10,13,5,26,3
+Cyber Crime,4,16,15,24,46,60
+Cyber Crime,5,10,15,17,24,75
+Kidnapping,2,14,10,18,22,50
+Fraud,5,15,6,8,17,59
+Domestic Violence,3,7,9,25,18,46
+Drug Trafficking,3,15,11,18,50,37
+Fraud,3,3,12,13,22,67
+Fraud,1,9,2,12,28,35
+Fraud,4,6,6,18,17,114
+Murder,1,19,7,8,3,34
+Domestic Violence,2,20,7,2,6,3
+Robbery,2,0,5,14,41,38
+Drug Trafficking,4,20,6,25,18,92
+Robbery,5,7,1,6,26,56
+Murder,1,26,12,16,11,50
+Fraud,1,0,9,19,38,42
+Robbery,3,9,14,21,34,23
+Murder,5,14,8,7,7,134
+Kidnapping,2,23,14,21,16,49
+Kidnapping,3,18,6,6,39,36
+Assault,4,16,10,3,25,3
+Murder,4,10,7,1,16,85
+Assault,2,14,8,11,19,7
+Fraud,3,22,7,2,42,4
+Robbery,4,9,5,13,43,25
+Fraud,1,20,9,12,39,7
+Cyber Crime,2,30,4,16,9,17
+Kidnapping,4,22,15,25,34,101
+Cyber Crime,2,21,2,17,28,33
+Robbery,1,26,6,19,34,10
+Murder,2,10,14,4,43,29
+Robbery,5,14,1,15,8,81
+Domestic Violence,4,14,1,18,29,37
+Theft,4,8,0,24,13,64
+Robbery,1,13,11,23,4,37
+Robbery,4,1,9,14,11,53
+Murder,4,11,12,15,24,96
+Domestic Violence,2,20,11,4,11,3
+Domestic Violence,4,16,4,24,14,59
+Fraud,4,21,13,18,24,48
+Cyber Crime,2,14,11,5,17,6
+Robbery,1,25,13,20,49,3
+Theft,2,6,2,4,38,3
+Theft,2,23,1,13,28,8
+Cyber Crime,5,6,1,5,32,77
+Kidnapping,5,19,10,8,19,94
+Murder,5,7,13,10,17,193
+Murder,4,17,15,2,22,80
+Assault,5,10,13,14,9,39
+Domestic Violence,4,7,7,10,45,11
+Murder,4,29,1,18,26,142
+Murder,4,7,8,7,21,104
+Robbery,4,27,11,3,34,3
+Fraud,4,21,1,3,12,45
+Domestic Violence,2,15,6,11,19,6
+Cyber Crime,1,23,15,8,44,3
+Cyber Crime,4,29,7,18,20,52
+Domestic Violence,3,9,8,12,32,9
+Drug Trafficking,4,3,15,25,20,118
+Assault,1,18,7,24,9,34
+Theft,3,17,13,10,9,3
+Cyber Crime,4,17,10,9,48,28
+Drug Trafficking,4,14,5,24,50,91
+Domestic Violence,4,5,1,17,2,62
+Robbery,1,24,0,14,8,22
+Murder,1,6,14,12,3,46
+Drug Trafficking,4,0,0,18,35,109
+Fraud,5,9,0,17,44,112
+Assault,2,3,3,17,9,50
+Fraud,3,8,12,3,23,27
+Assault,4,18,7,23,14,47
+Robbery,1,2,12,13,24,21
+Domestic Violence,4,1,0,23,10,96
+Kidnapping,5,27,3,17,2,145
+Cyber Crime,2,28,15,9,2,3
+Fraud,5,18,1,6,20,72
+Theft,2,18,4,25,45,36
+Fraud,2,18,7,19,24,33
+Domestic Violence,3,12,4,23,46,43
+Kidnapping,1,3,13,8,4,37
+Kidnapping,5,24,12,25,20,142
+Drug Trafficking,4,7,11,18,24,90
+Assault,2,21,12,3,49,3
+Robbery,1,8,4,13,45,13
+Murder,4,10,11,4,5,110
+Kidnapping,3,3,4,3,11,63
+Assault,4,17,13,4,1,3
+Kidnapping,4,0,9,14,24,114
+Robbery,5,28,7,19,33,43
+Murder,3,9,8,16,9,114
+Robbery,2,13,8,14,19,20
+Fraud,2,23,15,20,39,24
+Cyber Crime,4,3,4,10,0,85
+Assault,3,14,10,14,41,8
+Murder,3,10,6,16,20,106
+Kidnapping,3,23,15,19,50,49
+Cyber Crime,3,12,8,13,23,45
+Domestic Violence,2,21,0,24,29,42
+Cyber Crime,4,25,9,23,4,78
+Assault,4,4,9,8,16,20
+Murder,4,25,12,3,28,78
+Assault,5,16,13,18,2,45
+Kidnapping,5,19,2,4,49,87
+Murder,5,1,12,25,21,231
+Assault,1,0,3,9,14,22
+Cyber Crime,4,11,12,15,49,43
+Domestic Violence,2,11,0,16,6,35
+Robbery,1,26,4,12,19,3
+Kidnapping,4,25,6,17,30,81
+Drug Trafficking,3,2,9,2,45,30
+Robbery,1,27,10,21,6,17
+Cyber Crime,5,5,5,11,35,71
+Assault,4,7,12,21,11,56
+Assault,1,23,6,15,37,3
+Assault,4,0,6,7,17,34
+Robbery,5,3,5,12,20,45
+Cyber Crime,4,3,8,22,31,67
+Assault,5,12,3,12,22,43
+Drug Trafficking,5,5,9,20,37,126
+Robbery,2,9,3,6,23,14
+Murder,5,12,13,20,8,143
+Drug Trafficking,5,22,5,18,10,103
+Drug Trafficking,3,4,5,11,28,49
+Theft,4,4,6,13,35,24
+Domestic Violence,4,13,15,14,45,3
+Robbery,5,0,7,10,2,55
+Fraud,2,17,9,6,49,3
+Drug Trafficking,5,16,3,19,7,133
+Fraud,5,26,11,18,48,87
+Domestic Violence,2,13,3,24,41,39
+Cyber Crime,3,27,1,15,16,35
+Drug Trafficking,1,24,7,7,47,3
+Kidnapping,5,20,13,6,39,79
+Cyber Crime,1,18,11,18,17,26
+Domestic Violence,2,10,9,10,36,3
+Robbery,2,30,13,2,17,3
+Murder,2,7,4,23,20,119
+Assault,4,4,8,21,26,44
+Assault,4,2,2,13,32,47
+Kidnapping,4,30,15,11,37,34
+Theft,1,23,14,21,42,3
+Domestic Violence,4,6,13,7,31,3
+Fraud,3,26,9,11,35,17
+Drug Trafficking,3,28,1,2,6,25
+Drug Trafficking,1,3,5,15,29,68
+Cyber Crime,2,28,9,6,17,3
+Robbery,3,8,2,12,42,32
+Assault,3,23,7,14,41,3
+Robbery,1,0,6,16,4,49
+Drug Trafficking,1,0,10,4,27,19
+Murder,4,2,7,13,5,136
+Kidnapping,3,28,9,5,24,22
+Murder,2,2,0,20,41,111
+Cyber Crime,2,29,13,20,43,12
+Drug Trafficking,2,2,3,5,48,39
+Kidnapping,4,10,4,8,17,104
+Robbery,2,17,9,25,44,42
+Fraud,2,16,6,24,25,67
+Fraud,1,25,7,16,24,24
+Robbery,5,28,0,12,20,46
+Murder,4,27,13,12,34,74
+Robbery,1,18,2,1,16,3
+Cyber Crime,1,29,1,13,32,10
+Assault,4,22,12,3,40,3
+Domestic Violence,5,19,4,9,5,21
+Cyber Crime,2,17,10,13,37,18
+Robbery,3,22,13,24,15,36
+Assault,1,14,1,10,42,5
+Murder,1,0,4,23,0,124
+Domestic Violence,5,25,8,6,23,3
+Murder,3,23,3,25,1,109
+Domestic Violence,1,8,2,16,29,30
+Domestic Violence,3,1,15,19,10,31
+Robbery,5,21,3,8,47,25
+Domestic Violence,1,1,0,8,2,25
+Murder,2,29,1,18,45,64
+Assault,2,10,7,14,46,11
+Kidnapping,1,16,1,6,14,38
+Domestic Violence,1,30,12,3,29,3
+Fraud,3,2,14,1,23,17
+Cyber Crime,3,18,9,24,39,52
+Drug Trafficking,2,23,7,5,0,23
+Assault,1,7,11,21,44,27
+Theft,4,27,9,4,13,3
+Domestic Violence,2,13,15,2,9,3
+Cyber Crime,5,13,11,15,47,58
+Robbery,5,3,4,21,25,99
+Assault,2,7,9,9,20,11
+Assault,3,10,14,9,14,5
+Robbery,2,3,5,15,29,39
+Kidnapping,4,3,11,25,13,108
+Robbery,1,5,9,23,44,37
+Theft,2,26,10,5,5,3
+Assault,5,1,9,9,11,27
+Theft,4,27,14,18,47,3
+Robbery,2,3,0,2,49,6
+Cyber Crime,2,6,12,12,43,17
+Fraud,1,0,2,7,41,26
+Drug Trafficking,2,2,10,4,2,38
+Assault,4,15,0,13,43,31
+Assault,2,11,6,6,17,4
+Theft,5,19,7,21,18,59
+Drug Trafficking,4,28,15,2,5,23
+Cyber Crime,5,7,0,13,50,89
+Kidnapping,4,17,15,12,36,53
+Murder,1,10,7,1,49,12
+Fraud,1,25,15,17,22,10
+Murder,1,7,7,9,34,17
+Theft,2,18,12,12,11,3
+Kidnapping,5,0,11,19,36,160
+Murder,5,30,6,16,34,128
+Robbery,1,7,7,1,33,3
+Drug Trafficking,1,10,6,5,21,16
+Kidnapping,1,0,4,19,45,43
+Murder,1,27,11,3,23,3
+Robbery,3,9,10,5,10,8
+Assault,4,20,10,6,45,3
+Kidnapping,2,21,5,13,19,45
+Fraud,2,5,0,23,36,51
+Theft,2,19,10,20,14,26
+Robbery,4,4,10,24,4,79
+Murder,1,26,10,15,0,60
+Fraud,2,7,2,12,16,59
+Theft,4,14,13,6,26,3
+Drug Trafficking,4,11,12,4,30,46
+Cyber Crime,2,14,2,2,18,11
+Theft,3,8,3,3,21,4
+Robbery,5,30,2,11,38,28
+Drug Trafficking,1,13,5,20,27,53
+Cyber Crime,2,13,8,22,18,57
+Fraud,2,3,1,13,36,47
+Theft,3,0,13,3,18,3
+Drug Trafficking,2,3,0,7,10,42
+Drug Trafficking,1,9,12,16,31,21
+Fraud,1,20,12,6,23,3
+Drug Trafficking,1,8,14,15,16,29
+Cyber Crime,3,18,1,5,48,15
+Kidnapping,5,13,7,18,3,129
+Assault,5,13,15,19,15,40
+Theft,5,18,4,4,48,3
+Drug Trafficking,2,30,5,7,12,17
+Assault,2,26,4,20,16,28
+Kidnapping,1,2,12,18,25,38
+Domestic Violence,4,29,0,23,39,28
+Domestic Violence,4,3,13,5,9,5
+Robbery,1,18,3,10,34,3
+Kidnapping,4,8,12,21,31,88
+Murder,3,12,4,20,38,96
+Assault,1,12,10,23,15,40
+Fraud,3,0,10,10,19,57
+Fraud,4,27,3,8,8,49
+Kidnapping,3,23,13,20,41,65
+Robbery,2,14,6,14,47,10
+Kidnapping,1,16,5,3,19,14
+Domestic Violence,4,4,0,6,12,32
+Theft,2,1,14,2,23,3
+Cyber Crime,3,11,14,17,25,37
+Theft,2,11,15,20,28,14
+Murder,4,18,11,12,10,113
+Robbery,3,0,12,2,10,8
+Cyber Crime,2,20,7,22,13,48
+Theft,1,15,4,21,11,40
+Theft,2,8,9,23,45,27
+Assault,3,14,8,7,29,3
+Fraud,5,26,12,19,6,140
+Kidnapping,5,20,9,10,43,93
+Robbery,4,2,10,9,40,25
+Fraud,2,4,7,2,38,18
+Assault,3,21,4,24,1,37
+Fraud,4,12,12,24,2,56
+Cyber Crime,3,23,7,22,34,41
+Kidnapping,5,9,5,22,35,125
+Murder,3,3,15,5,47,52
+Murder,3,20,2,8,22,94
+Cyber Crime,3,13,10,12,16,30
+Robbery,4,1,2,16,12,65
+Domestic Violence,1,27,12,17,19,3
+Murder,2,6,10,14,36,78
+Drug Trafficking,2,10,5,25,5,69
+Murder,3,20,1,1,28,56
+Fraud,2,24,5,19,48,39
+Robbery,2,19,13,21,27,24
+Assault,4,30,15,13,0,4
+Kidnapping,1,28,10,25,33,41
+Cyber Crime,1,21,0,21,46,36
+Kidnapping,3,4,3,13,32,98
+Fraud,2,2,1,10,18,48
+Domestic Violence,3,13,4,11,31,11
+Kidnapping,2,5,12,1,14,27
+Cyber Crime,1,18,5,4,23,3
+Theft,4,28,8,25,34,24
+Theft,1,20,0,2,44,3
+Robbery,4,14,12,4,35,3
+Cyber Crime,1,9,13,22,6,56
+Domestic Violence,3,19,4,14,6,16
+Fraud,1,25,3,16,12,32
+Cyber Crime,3,26,6,12,45,14
+Domestic Violence,4,29,6,23,30,25
+Kidnapping,2,0,0,22,5,135
+Drug Trafficking,2,30,2,25,32,49
+Robbery,1,28,8,21,14,10
+Fraud,4,1,3,6,2,91
+Fraud,3,25,10,14,47,28
+Theft,1,27,4,22,41,13
+Murder,3,11,14,20,17,99
+Kidnapping,2,3,12,13,29,49
+Fraud,4,22,15,14,41,42
+Murder,1,30,5,4,26,8
+Drug Trafficking,5,21,14,6,39,48
+Theft,2,15,15,4,26,3
+Drug Trafficking,1,2,8,21,20,83
+Domestic Violence,5,23,7,22,21,39
+Domestic Violence,5,22,3,14,42,17
+Assault,2,26,1,1,41,3
+Murder,5,27,15,16,10,155
+Cyber Crime,3,8,1,17,14,76
+Domestic Violence,4,12,7,3,29,3
+Robbery,4,14,10,4,31,4
+Theft,1,12,13,2,35,3
+Fraud,5,17,6,21,42,92
+Drug Trafficking,3,11,1,8,29,47
+Drug Trafficking,3,22,14,4,6,20
+Cyber Crime,1,10,11,21,18,35
+Robbery,1,28,5,16,8,12
+Assault,1,8,6,7,7,11
+Drug Trafficking,2,22,10,4,48,3
+Assault,1,29,3,25,28,21
+Domestic Violence,2,30,15,1,33,3
+Theft,5,29,13,19,30,15
+Murder,5,5,4,4,24,127
+Kidnapping,5,28,12,14,38,106
+Fraud,4,30,10,10,28,30
+Murder,2,13,9,23,35,96
+Domestic Violence,2,6,6,20,45,23
+Fraud,3,29,4,23,41,59
+Domestic Violence,3,22,3,25,22,39
+Domestic Violence,4,18,13,22,47,18
+Assault,1,16,3,1,24,3
+Murder,1,21,1,7,17,38
+Fraud,3,4,1,23,50,78
+Fraud,2,24,1,12,28,40
+Domestic Violence,2,23,12,8,32,3
+Fraud,1,29,12,13,26,3
+Kidnapping,5,1,0,24,16,156
+Cyber Crime,5,27,14,8,40,24
+Domestic Violence,5,6,6,10,28,22
+Murder,1,5,5,24,32,89
+Fraud,5,8,4,6,37,82
+Fraud,1,10,14,23,9,66
+Theft,5,26,9,16,50,8
+Domestic Violence,3,2,10,17,14,41
+Domestic Violence,2,13,12,3,22,3
+Cyber Crime,2,21,10,11,23,10
+Domestic Violence,4,17,0,4,42,3
+Kidnapping,4,7,7,2,43,68
+Robbery,4,8,9,1,33,4
+Kidnapping,5,25,14,16,2,100
+Kidnapping,5,2,3,6,49,133
+Domestic Violence,5,0,2,7,42,27
+Assault,1,6,13,21,4,33
+Murder,1,14,10,2,5,24
+Fraud,5,2,7,9,26,97
+Assault,4,20,12,14,20,19
+Domestic Violence,1,20,2,25,47,28
+Theft,1,11,3,10,50,3
+Fraud,4,12,12,22,1,75
+Drug Trafficking,2,17,7,5,47,7
+Domestic Violence,3,30,4,10,43,3
+Kidnapping,1,17,4,4,2,28
+Domestic Violence,5,30,2,10,13,12
+Kidnapping,2,13,4,6,11,46
+Cyber Crime,1,5,1,25,35,87
+Drug Trafficking,5,2,9,22,4,140
+Drug Trafficking,3,11,4,22,41,86
+Cyber Crime,1,9,2,7,20,19
+Fraud,5,4,11,11,27,89
+Murder,1,10,7,8,45,31
+Kidnapping,2,21,10,16,29,35
+Drug Trafficking,3,24,9,16,35,48
+Robbery,3,27,4,18,12,35
+Fraud,1,23,2,1,32,3
+Assault,5,6,1,18,16,59
+Domestic Violence,5,15,4,12,25,27
+Fraud,2,14,2,13,23,59
+Domestic Violence,1,21,7,20,43,6
+Drug Trafficking,2,5,4,24,46,88
+Drug Trafficking,3,1,7,25,31,98
+Cyber Crime,1,21,6,17,50,15
+Kidnapping,4,15,14,2,2,63
+Domestic Violence,3,26,8,19,34,6
+Murder,4,20,12,12,37,76
+Domestic Violence,3,12,7,17,25,18
+Kidnapping,3,15,15,20,0,69
+Murder,2,2,8,7,9,69
+Murder,2,11,3,22,14,91
+Robbery,4,21,15,16,13,25
+Murder,4,0,7,2,8,102
+Domestic Violence,1,28,4,2,10,3
+Fraud,2,16,12,20,36,31
+Fraud,1,6,14,20,30,30
+Drug Trafficking,2,7,13,20,9,67
+Murder,5,21,8,6,46,84
+Kidnapping,4,19,2,8,24,74
+Cyber Crime,5,27,13,5,38,21
+Robbery,2,15,1,18,32,36
+Murder,5,17,0,25,43,170
+Assault,5,13,11,2,44,3
+Drug Trafficking,4,11,3,14,8,92
+Fraud,4,24,7,3,18,28
+Fraud,2,0,0,19,33,70
+Robbery,5,0,12,21,13,74
+Kidnapping,1,4,13,21,37,45
+Fraud,3,27,13,19,23,24
+Assault,2,13,15,6,23,3
+Domestic Violence,5,15,8,10,36,8
+Murder,1,23,7,15,50,37
+Murder,1,6,12,11,35,32
+Theft,2,12,0,3,9,5
+Drug Trafficking,5,13,2,3,16,88
+Theft,4,29,12,20,41,4
+Domestic Violence,3,22,1,25,11,43
+Cyber Crime,5,9,6,2,50,37
+Domestic Violence,5,22,7,20,10,36
+Theft,2,2,8,25,25,45
+Kidnapping,4,12,6,17,0,111
+Robbery,5,9,11,12,17,43
+Cyber Crime,5,30,6,15,25,53
+Assault,5,3,2,17,18,68
+Kidnapping,1,25,8,18,50,18
+Assault,5,15,7,25,21,60
+Drug Trafficking,4,28,0,16,7,84
+Cyber Crime,2,25,10,14,22,16
+Domestic Violence,5,0,8,8,18,35
+Kidnapping,1,17,5,16,20,50
+Kidnapping,2,28,8,6,47,4
+Drug Trafficking,2,7,7,9,13,31
+Cyber Crime,2,26,7,20,22,35
+Robbery,4,19,0,25,34,71
+Theft,4,11,10,16,36,24
+Domestic Violence,3,12,7,25,36,34
+Murder,1,16,13,16,34,43
+Murder,4,3,14,11,44,105
+Theft,1,21,6,13,37,3
+Fraud,2,17,8,8,17,24
+Drug Trafficking,5,10,11,6,31,65
+Kidnapping,3,27,12,9,28,29
+Murder,5,4,7,4,46,130
+Assault,4,6,4,24,9,84
+Drug Trafficking,1,5,13,16,8,56
+Domestic Violence,5,23,10,16,19,18
+Fraud,5,27,1,13,6,90
+Fraud,4,26,3,15,47,54
+Kidnapping,3,11,11,18,35,75
+Theft,4,3,11,22,38,41
+Cyber Crime,5,18,5,25,18,89
+Drug Trafficking,4,28,2,13,39,71
+Fraud,4,20,4,6,40,44
+Assault,1,2,5,11,14,22
+Kidnapping,3,20,9,23,17,71
+Drug Trafficking,3,23,14,14,10,35
+Murder,1,4,7,22,16,104
+Robbery,2,5,12,4,6,4
+Robbery,4,17,1,1,49,3
+Robbery,1,8,4,3,41,3
+Assault,3,7,7,24,18,53
+Domestic Violence,2,0,1,22,22,60
+Kidnapping,4,14,8,18,28,121
+Domestic Violence,2,18,14,21,47,3
+Assault,5,20,9,12,30,16
+Drug Trafficking,3,11,13,9,9,39
+Fraud,1,0,4,12,18,48
+Drug Trafficking,4,9,0,25,27,122
+Fraud,5,7,0,18,23,138
+Assault,4,7,5,23,47,71
+Assault,4,7,8,3,27,7
+Fraud,3,20,8,14,12,41
+Robbery,2,4,9,4,40,3
+Drug Trafficking,2,10,0,5,3,49
+Domestic Violence,1,5,3,10,17,20
+Theft,2,2,4,1,31,3
+Cyber Crime,3,13,9,16,23,33
+Kidnapping,1,26,4,2,17,3
+Assault,1,17,15,6,12,3
+Assault,1,3,7,13,49,11
+Drug Trafficking,2,23,1,7,29,24
+Cyber Crime,4,12,9,11,10,50
+Theft,5,16,3,9,30,20
+Theft,2,3,7,21,27,38
+Kidnapping,1,5,8,19,7,60
+Theft,5,25,15,23,38,22
+Murder,3,24,2,8,10,57
+Kidnapping,1,1,11,21,9,70
+Domestic Violence,1,4,15,8,20,3
+Kidnapping,4,23,6,1,44,40
+Assault,3,23,4,9,2,10
+Fraud,5,22,15,7,36,47
+Murder,5,11,10,24,29,167
+Domestic Violence,2,2,4,15,18,45
+Fraud,5,11,14,1,49,37
+Murder,1,19,11,25,39,52
+Cyber Crime,3,23,2,22,34,57
+Drug Trafficking,5,4,9,11,26,92
+Kidnapping,1,3,2,2,8,37
+Robbery,4,6,3,2,36,19
+Assault,4,16,8,2,23,3
+Theft,2,20,15,3,29,3
+Theft,3,17,13,12,50,3
+Fraud,5,1,2,10,4,84
+Cyber Crime,5,3,3,24,14,112
+Domestic Violence,2,18,5,18,47,10
+Domestic Violence,4,23,3,25,40,30
+Assault,1,5,5,18,25,31
+Domestic Violence,3,21,5,18,38,12
+Kidnapping,5,10,11,14,48,112
+Assault,3,19,7,19,34,25
+Fraud,3,30,14,15,25,27
+Theft,1,9,0,17,8,46
+Fraud,2,6,10,1,49,3
+Fraud,5,16,4,4,2,72
+Fraud,3,28,7,8,16,23
+Fraud,1,18,12,19,13,31
+Drug Trafficking,2,15,3,20,41,44
+Fraud,1,23,12,3,49,3
+Kidnapping,4,13,3,25,14,142
+Theft,4,1,9,17,2,47
+Kidnapping,5,22,7,5,3,111
+Assault,4,24,2,8,27,10
+Murder,3,2,15,19,47,102
+Theft,5,12,8,3,25,3
+Murder,2,15,6,16,25,73
+Cyber Crime,5,19,7,8,4,61
+Robbery,1,21,13,14,23,3
+Kidnapping,2,10,11,20,41,65
+Kidnapping,5,26,14,20,9,115
+Drug Trafficking,1,29,7,7,43,3
+Robbery,1,23,1,8,39,3
+Murder,3,0,10,23,7,119
+Kidnapping,2,23,6,7,34,25
+Domestic Violence,3,17,15,20,46,3
+Theft,4,18,1,9,10,22
+Theft,3,6,8,2,29,3
+Assault,3,21,11,4,1,3
+Fraud,4,7,12,17,45,76
+Domestic Violence,1,5,6,17,29,27
+Domestic Violence,1,1,7,17,19,30
+Murder,1,11,11,12,40,40
+Fraud,2,16,8,2,40,3
+Theft,5,30,8,8,9,3
+Kidnapping,4,21,4,3,46,37
+Cyber Crime,4,7,4,14,19,91
+Kidnapping,4,17,4,7,41,76
+Cyber Crime,2,9,4,14,49,38
+Murder,5,29,5,11,4,92
+Robbery,2,10,4,24,1,56
+Kidnapping,4,30,13,10,28,49
+Fraud,2,24,6,4,8,8
+Murder,1,24,8,20,36,39
+Cyber Crime,1,11,2,23,49,42
+Drug Trafficking,2,16,15,23,41,34
+Drug Trafficking,4,4,5,7,14,96
+Theft,4,24,0,9,26,11
+Cyber Crime,2,2,5,15,39,57
+Drug Trafficking,3,27,14,8,27,11
+Assault,3,12,1,17,6,50
+Drug Trafficking,4,26,1,8,33,32
+Theft,5,12,1,7,18,26
+Drug Trafficking,4,28,9,25,18,73
+Theft,5,28,4,15,41,16
+Drug Trafficking,1,23,3,6,49,3
+Domestic Violence,2,12,13,11,28,3
+Theft,2,14,6,15,5,24
+Murder,1,2,3,23,28,114
+Kidnapping,1,16,12,24,50,50
+Murder,4,17,12,2,49,63
+Murder,3,18,4,6,9,80
+Assault,3,9,14,10,40,3
+Murder,1,28,4,7,0,28
+Drug Trafficking,4,27,15,18,0,61
+Drug Trafficking,2,6,15,15,26,33
+Theft,2,28,8,20,40,3
+Domestic Violence,2,1,5,5,3,15
+Theft,5,26,9,11,5,13
+Theft,1,13,5,6,43,3
+Domestic Violence,2,30,14,24,37,3
+Kidnapping,1,2,9,11,23,51
+Assault,5,2,9,16,8,52
+Robbery,3,10,13,17,13,30
+Robbery,5,23,2,16,46,35
+Fraud,4,19,10,9,33,35
+Murder,5,18,15,17,46,120
+Drug Trafficking,4,25,5,20,14,77
+Theft,1,0,14,21,50,12
+Robbery,2,25,13,14,2,4
+Cyber Crime,1,20,6,23,18,50
+Fraud,1,9,9,17,35,34
+Kidnapping,3,12,0,6,12,67
+Kidnapping,3,29,15,16,2,42
+Drug Trafficking,5,28,10,15,50,61
+Assault,1,26,9,19,46,3
+Theft,2,18,10,12,4,4
+Murder,3,26,0,11,24,61
+Assault,2,19,3,25,19,37
+Kidnapping,1,8,13,3,31,5
+Fraud,2,16,9,6,7,19
+Kidnapping,1,24,6,3,28,3
+Domestic Violence,2,6,10,16,46,11
+Domestic Violence,3,24,10,5,49,3
+Domestic Violence,2,6,1,15,24,27
+Domestic Violence,1,0,9,2,43,3
+Kidnapping,4,28,1,4,33,42
+Fraud,1,18,9,21,13,41
+Fraud,5,10,14,22,7,121
+Fraud,2,5,8,4,0,40
+Robbery,2,17,11,18,20,20
+Fraud,2,30,9,19,15,35
+Kidnapping,5,14,1,5,1,129
+Drug Trafficking,1,3,12,2,5,13
+Drug Trafficking,5,11,9,11,12,102
+Domestic Violence,1,29,14,19,8,3
+Drug Trafficking,1,14,9,22,41,48
+Drug Trafficking,4,7,7,5,39,56
+Murder,3,25,10,15,31,77
+Theft,1,15,3,12,30,6
+Kidnapping,5,18,4,17,6,137
+Assault,1,10,2,10,34,9
+Cyber Crime,5,7,5,16,24,96
+Robbery,3,6,13,14,36,21
+Cyber Crime,2,21,2,24,45,40
+Drug Trafficking,1,18,14,11,35,3
+Fraud,4,2,3,22,38,116
+Assault,3,15,1,3,13,8
+Theft,2,21,4,15,34,5
+Fraud,4,19,14,7,13,36
+Fraud,4,22,11,3,37,18
+Theft,5,16,12,5,18,3
+Theft,1,22,11,4,18,3
+Theft,2,13,12,21,20,22
+Assault,5,6,5,16,8,55
+Cyber Crime,5,12,11,14,9,70
+Murder,2,0,2,21,1,156
+Murder,4,21,13,5,5,98
+Drug Trafficking,5,29,13,20,11,111
+Drug Trafficking,5,13,14,13,22,90
+Theft,5,15,7,23,32,57
+Fraud,4,29,11,2,2,19
+Robbery,5,15,2,5,46,23
+Domestic Violence,3,14,2,17,39,28
+Robbery,5,25,9,20,3,60
+Kidnapping,5,24,0,16,29,102
+Kidnapping,4,11,9,10,10,85
+Theft,5,23,9,24,50,30
+Drug Trafficking,5,5,1,22,18,142
+Theft,3,15,2,5,32,3
+Fraud,2,19,8,9,16,26
+Theft,1,19,5,19,47,10
+Murder,3,25,7,16,11,94
+Domestic Violence,1,10,2,5,38,3
+Drug Trafficking,4,24,12,8,42,33
+Drug Trafficking,2,6,11,2,41,9
+Theft,2,14,12,16,19,13
+Drug Trafficking,5,7,12,22,45,102
+Domestic Violence,4,0,9,15,24,39
+Kidnapping,5,21,1,4,34,69
+Assault,5,29,8,11,17,11
+Fraud,1,8,12,15,49,19
+Cyber Crime,5,10,5,11,35,64
+Theft,1,26,2,1,26,3
+Drug Trafficking,3,7,9,9,12,55
+Theft,1,19,2,2,38,3
+Robbery,1,2,4,13,42,18
+Murder,1,22,5,9,18,22
+Drug Trafficking,3,24,13,23,42,52
+Kidnapping,3,5,2,9,49,72
+Theft,3,30,8,6,28,3
+Robbery,4,29,6,20,25,38
+Murder,5,24,13,7,39,124
+Robbery,4,22,8,4,2,10
+Fraud,4,0,15,5,41,47
+Theft,1,21,12,9,9,3
+Theft,5,22,15,16,27,7

@@ -1,6 +1,23 @@
+# =============================================================================
+# requirements.txt — Python dependencies for Rakshak AI ML microservice
+#
+# Install:  pip install -r requirements.txt
+# Python:   3.10 or higher recommended
+#
+# Sections:
+#   Web framework  — Flask + CORS middleware for the REST API
+#   ML / numerics  — scikit-learn, pandas, numpy for training and inference
+#   Production     — gunicorn WSGI server (use instead of flask dev server)
+# =============================================================================
+
+# ── Web framework ────────────────────────────────────────────────────────────
 flask==3.0.3
 flask-cors==4.0.1
+
+# ── ML / numerics ────────────────────────────────────────────────────────────
 scikit-learn==1.5.2
 pandas==2.2.3
 numpy==1.26.4
-pickle5; python_version < "3.8"
+
+# ── Production WSGI server ───────────────────────────────────────────────────
+gunicorn==22.0.0
