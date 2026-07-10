@@ -1,11 +1,9 @@
-const { GoogleGenerativeAI } = require("@google/genai");
+const { GoogleGenAI } = require("@google/genai");
 
-const genai = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const analyzeFIR = async (firText) => {
   try {
-    const model = genai.getGenerativeModel({ model: "gemini-1.5-flash" });
-
     const prompt = `You are a senior crime analyst AI. Analyze the following FIR (First Information Report) and extract structured information.
 
 FIR Content:
@@ -16,7 +14,7 @@ Return ONLY a valid JSON object with this exact structure:
   "summary": "Brief 2-3 sentence summary of the incident",
   "crimeType": "one of: theft|assault|fraud|murder|cybercrime|kidnapping|other",
   "priority": "one of: low|medium|high|critical",
-  "victims": [{"name": "string", "age": number or null, "description": "string"}],
+  "victims": [{"name": "string", "age": null, "description": "string"}],
   "suspects": [{"name": "string", "description": "string", "status": "unknown"}],
   "locations": ["list of locations mentioned"],
   "dates": ["list of dates/times mentioned"],
@@ -25,10 +23,12 @@ Return ONLY a valid JSON object with this exact structure:
   "recommendedActions": ["list of immediate actions recommended"]
 }`;
 
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
+    const response = await genai.models.generateContent({
+      model: "gemini-2.0-flash",
+      contents: prompt,
+    });
 
-    // Extract JSON from response
+    const text = response.text;
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error("No JSON found in Gemini response");
 
@@ -52,8 +52,6 @@ Return ONLY a valid JSON object with this exact structure:
 
 const generateInvestigationReport = async (caseData) => {
   try {
-    const model = genai.getGenerativeModel({ model: "gemini-1.5-flash" });
-
     const prompt = `You are a senior police investigator. Generate a professional investigation report for the following case.
 
 Case Details:
@@ -77,8 +75,12 @@ Return a professional investigation report in plain text format with sections:
 6. RECOMMENDED NEXT STEPS
 7. CONCLUSION`;
 
-    const result = await model.generateContent(prompt);
-    return result.response.text();
+    const response = await genai.models.generateContent({
+      model: "gemini-2.0-flash",
+      contents: prompt,
+    });
+
+    return response.text;
   } catch (err) {
     console.error("Gemini report generation error:", err.message);
     return `Investigation Report for ${caseData.caseNumber}\n\nAI report generation unavailable. Please complete manually.`;
