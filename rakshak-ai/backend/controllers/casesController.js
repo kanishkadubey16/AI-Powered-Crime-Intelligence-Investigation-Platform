@@ -1,5 +1,5 @@
 const { Case, User, Evidence } = require("../models");
-const { analyzeFIR } = require("../services/geminiService");
+const { analyzeFIR } = require("../services/ai");
 const { predictInvestigationTime } = require("../services/mlService");
 
 // GET /api/cases
@@ -71,57 +71,85 @@ const uploadFIR = async (req, res, next) => {
       return res.status(400).json({ success: false, message: "Title and type are required." });
     }
 
-    const newCase = await Case.create({
-      title, description, type, priority, location, incidentDate,
+    const caseData = {
+      title,
+      description,
+      type,
+      priority,
+      location,
+      incidentDate,
       witnesses: Number(witnesses) || 0,
       filedBy: req.user._id,
       assignedOfficer: req.user._id,
       complainant: { name: complainantName, contact: complainantContact, address: complainantAddress },
-    });
+    };
 
-    if (req.files && req.files.length > 0) {
-      const evidenceDocs = await Promise.all(
-        req.files.map((file) =>
-          Evidence.create({
-            caseId: newCase._id,
-            filename: file.filename,
-            originalName: file.originalname,
-            fileType: file.mimetype.startsWith("image/") ? "image" : "document",
-            mimeType: file.mimetype,
-            fileSize: file.size,
-            url: `/uploads/${file.filename}`,
-            uploadedBy: req.user._id,
-          })
-        )
-      );
-      newCase.evidence = evidenceDocs.map((e) => e._id);
+    const newCase = await Case.create(caseData);
+    console.log("[uploadFIR] Case created:", newCase._id);
+
+    // Handle file uploads - defensive check
+    const files = Array.isArray(req.files) ? req.files : [];
+    if (files.length > 0) {
+      console.log("[uploadFIR] Processing", files.length, "files");
+      try {
+        const evidenceDocs = await Promise.all(
+          files.map((file) =>
+            Evidence.create({
+              caseId: newCase._id,
+              filename: file.filename,
+              originalName: file.originalname,
+              fileType: file.mimetype?.startsWith("image/") ? "image" : "document",
+              mimeType: file.mimetype,
+              fileSize: file.size,
+              url: `/uploads/${file.filename}`,
+              uploadedBy: req.user._id,
+            })
+          )
+        );
+        newCase.evidence = evidenceDocs.map((e) => e._id);
+        console.log("[uploadFIR] Evidence created:", evidenceDocs.length);
+      } catch (evidenceErr) {
+        console.error("[uploadFIR] Evidence creation failed:", evidenceErr.message);
+        // Continue without evidence - don't fail the whole case
+      }
     }
 
+    // AI Analysis
+    console.log("[uploadFIR] Calling Gemini...");
     const firText = `${title}\n${description || ""}\nLocation: ${location || ""}\nComplainant: ${complainantName || ""}`;
     const aiAnalysis = await analyzeFIR(firText);
+    console.log("[uploadFIR] AI Analysis done:", aiAnalysis.summary?.substring(0, 50));
 
     newCase.aiSummary = aiAnalysis.summary;
     newCase.aiAnalysis = aiAnalysis;
 
     if (!priority && aiAnalysis.priority) newCase.priority = aiAnalysis.priority;
     if (aiAnalysis.suspects?.length > 0) {
-      newCase.suspects = aiAnalysis.suspects.map((s) => ({ name: s.name, description: s.description }));
+      newCase.suspects = aiAnalysis.suspects.map((s) => ({
+        name: s.name,
+        description: s.description,
+        status: s.status || "unknown"
+      }));
+      console.log("[uploadFIR] Suspects mapped:", newCase.suspects.length);
     }
 
+    // ML Prediction
+    console.log("[uploadFIR] Calling ML service...");
     const mlPrediction = await predictInvestigationTime({
       type: newCase.type,
       priority: newCase.priority,
       witnesses: newCase.witnesses,
       evidence: newCase.evidence,
     });
+    console.log("[uploadFIR] ML Prediction:", mlPrediction);
 
     newCase.mlPrediction = {
-      predictedDays: mlPrediction.predicted_days,
-      confidence: mlPrediction.confidence,
-      message: mlPrediction.message,
+      estimatedDays: mlPrediction.estimatedDays,
     };
 
+    console.log("[uploadFIR] Saving case...");
     await newCase.save();
+    console.log("[uploadFIR] Case saved successfully");
     await User.findByIdAndUpdate(req.user._id, { $addToSet: { assignedCases: newCase._id } });
 
     const populated = await Case.findById(newCase._id)
@@ -131,7 +159,12 @@ const uploadFIR = async (req, res, next) => {
 
     res.status(201).json({ success: true, case: populated });
   } catch (err) {
-    next(err);
+    console.error("[uploadFIR] ERROR:", err.message, err.stack);
+    res.status(500).json({ 
+      success: false, 
+      message: "Failed to create case",
+      error: process.env.NODE_ENV === "development" ? err.message : undefined
+    });
   }
 };
 
