@@ -1,0 +1,277 @@
+{
+  "accuracy_percentage": 100.0,
+  "passed_count": 30,
+  "total_count": 30,
+  "results": [
+    {
+      "id": 1,
+      "question": "What is Section 101?",
+      "expected_section": "101",
+      "retrieved_section": "101",
+      "passed": true,
+      "response_time": 24.34,
+      "answer_snippet": "Definition:\nUnder the Bharatiya Nyaya Sanhita (BNS), section 101 defines \"murder\" as culpable homicide committed with specific intentional acts or cir"
+    },
+    {
+      "id": 2,
+      "question": "What is Section 102?",
+      "expected_section": "102",
+      "retrieved_section": "102",
+      "passed": true,
+      "response_time": 2.94,
+      "answer_snippet": "Definition:\nUnder the Bharatiya Nyaya Sanhita (BNS), Section 102 governs search warrants issued under specific sections, ensuring that such warrants a"
+    },
+    {
+      "id": 3,
+      "question": "What is Section 103?",
+      "expected_section": "103",
+      "retrieved_section": "103",
+      "passed": true,
+      "response_time": 3.93,
+      "answer_snippet": "Definition:\nUnder the Bharatiya Nyaya Sanhita (BNS), Section 103 defines a person who is responsible for managing or controlling an area designated as"
+    },
+    {
+      "id": 4,
+      "question": "What is Section 109?",
+      "expected_section": "109",
+      "retrieved_section": "109",
+      "passed": true,
+      "response_time": 2.01,
+      "answer_snippet": "Definition:\nAny Court may, if it thinks fit, impound any document or thing produced before it under this Sanhita.\n\nApplicable Section:\nSection 109 of "
+    },
+    {
+      "id": 5,
+      "question": "What is Section 131?",
+      "expected_section": "131",
+      "retrieved_section": "131",
+      "passed": true,
+      "response_time": 2.57,
+      "answer_snippet": "Definition:\nThis section outlines the procedural requirements for a person who is present in court, ensuring that their presence and identity are prop"
+    },
+    {
+      "id": 6,
+      "question": "What is Section 303?",
+      "expected_section": "303",
+      "retrieved_section": "303",
+      "passed": true,
+      "response_time": 4.44,
+      "answer_snippet": "Definition:\nThe section grants the State Government or Central Government the power to exclude certain persons from operating a specific legal procedu"
+    },
+    {
+      "id": 7,
+      "question": "What is Section 309?",
+      "expected_section": "309",
+      "retrieved_section": "309",
+      "passed": true,
+      "response_time": 19.3,
+      "answer_snippet": "Definition:\nUnder the Bharatiya Nyaya Sanhita (BNS), Section 309 defines a \"summons-case\" as any case where an officer is summoned to appear in court "
+    },
+    {
+      "id": 8,
+      "question": "What is Section 310?",
+      "expected_section": "310",
+      "retrieved_section": "310",
+      "passed": true,
+      "response_time": 13.0,
+      "answer_snippet": "Definition:\nDacoity is the act where five or more people jointly commit, attempt to commit, aid in committing, or assemble for the purpose of committi"
+    },
+    {
+      "id": 9,
+      "question": "What is Section 311?",
+      "expected_section": "311",
+      "retrieved_section": "311",
+      "passed": true,
+      "response_time": 18.27,
+      "answer_snippet": "Definition:\nSection 311 defines what constitutes an \"inquiry\" or \"trial before Court of Session.\" It establishes that when a State Government, Central"
+    },
+    {
+      "id": 10,
+      "question": "What is Section 318?",
+      "expected_section": "318",
+      "retrieved_section": "318",
+      "passed": true,
+      "response_time": 39.06,
+      "answer_snippet": "Definition:\nUnder the Bharatiya Nyaya Sanhita (BNS), Section 318 defines a \"Record\" as any document, paper, or other medium that is kept by an officer"
+    },
+    {
+      "id": 11,
+      "question": "What is Section 351?",
+      "expected_section": "351",
+      "retrieved_section": "351",
+      "passed": true,
+      "response_time": 68.46,
+      "answer_snippet": "Definition:\nSection 351 grants the police power to examine an accused person during a trial, allowing them to provide evidence or statements that may "
+    },
+    {
+      "id": 12,
+      "question": "What is Section 172?",
+      "expected_section": "172",
+      "retrieved_section": "172",
+      "passed": true,
+      "response_time": 72.86,
+      "answer_snippet": "Definition:\nThe offence under Section 172 is the act of applying for a voting paper on behalf of another person (including living, dead, fictitious na"
+    },
+    {
+      "id": 13,
+      "question": "What is Section 173?",
+      "expected_section": "173",
+      "retrieved_section": "173",
+      "passed": true,
+      "response_time": 99.02,
+      "answer_snippet": "Definition:\nUnder the Bharatiya Nyaya Sanhita (BNS), Section 173 defines \"information in cognizable cases\" as information that can be used to investig"
+    },
+    {
+      "id": 14,
+      "question": "What is Section 176?",
+      "expected_section": "176",
+      "retrieved_section": "176",
+      "passed": true,
+      "response_time": 75.26,
+      "answer_snippet": "Definition:\nUnder this section, the police officer must conduct an investigation into a specific matter and record it in writing before proceeding to "
+    },
+    {
+      "id": 15,
+      "question": "What is Section 63?",
+      "expected_section": "63",
+      "retrieved_section": "63",
+      "passed": true,
+      "response_time": 110.4,
+      "answer_snippet": "Definition:\nA man is said to commit rape if he penetrates his penis into the vagina, mouth, urethra or anus of a woman without her consent; inserts an"
+    },
+    {
+      "id": 16,
+      "question": "What is Article 14?",
+      "expected_section": "14",
+      "retrieved_section": "14",
+      "passed": true,
+      "response_time": 75.6,
+      "answer_snippet": "Definition:\nNothing is an offence done by a person who believes themselves bound by law but mistakenly thinks they are not so bound; this includes bel"
+    },
+    {
+      "id": 17,
+      "question": "What is Article 19?",
+      "expected_section": "19",
+      "retrieved_section": "19",
+      "passed": true,
+      "response_time": 66.0,
+      "answer_snippet": "Definition:\nArticle 19 defines the legal requirement for a police officer (or any other authority) who is investigating an offence and has obtained ev"
+    },
+    {
+      "id": 18,
+      "question": "What is Article 21?",
+      "expected_section": "21",
+      "retrieved_section": "21",
+      "passed": true,
+      "response_time": 51.38,
+      "answer_snippet": "Definition:\nArticle 21 defines the legal consequences for a person who refuses or fails to admit facts in civil proceedings, specifically regarding th"
+    },
+    {
+      "id": 19,
+      "question": "What is murder?",
+      "expected_section": "101",
+      "retrieved_section": "101",
+      "passed": true,
+      "response_time": 64.61,
+      "answer_snippet": "Definition:\nCulpable homicide constitutes murder when an act by which death or injury causes occurs with intent to cause such result; where culpable h"
+    },
+    {
+      "id": 20,
+      "question": "What is punishment of murder?",
+      "expected_section": "103",
+      "retrieved_section": "103",
+      "passed": true,
+      "response_time": 1140.97,
+      "answer_snippet": "Definition:\nUnder Section 103 of the Bharatiya Nyaya Sanhita (BNS), a person commits murder if they intentionally cause death or injury to another hum"
+    },
+    {
+      "id": 21,
+      "question": "What is robbery?",
+      "expected_section": "309",
+      "retrieved_section": "309",
+      "passed": true,
+      "response_time": 9.47,
+      "answer_snippet": "Definition:\nRobbery is an offence under Section 309 of the Bharatiya Nyaya Sanhita (BNS), 2023, where a person voluntarily causes or attempts to cause"
+    },
+    {
+      "id": 22,
+      "question": "What is punishment of robbery?",
+      "expected_section": "311",
+      "retrieved_section": "311",
+      "passed": true,
+      "response_time": 3.52,
+      "answer_snippet": "Definition:\nA robbery occurs when an offender uses violence against the person or property of another while they are under the influence of intoxicati"
+    },
+    {
+      "id": 23,
+      "question": "What is theft?",
+      "expected_section": "303",
+      "retrieved_section": "303",
+      "passed": true,
+      "response_time": 5.4,
+      "answer_snippet": "Definition:\nTheft is defined as intentionally taking dishonestly movable property out of another person's possession without that person's consent; it"
+    },
+    {
+      "id": 24,
+      "question": "What is dacoity?",
+      "expected_section": "310",
+      "retrieved_section": "310",
+      "passed": true,
+      "response_time": 4.66,
+      "answer_snippet": "Definition:\nDacoity is defined as five or more persons jointly committing, attempting to commit, or aiding in a robbery; if one of those five or more "
+    },
+    {
+      "id": 25,
+      "question": "What is assault?",
+      "expected_section": "131",
+      "retrieved_section": "131",
+      "passed": true,
+      "response_time": 3.16,
+      "answer_snippet": "Definition:\nUnder Section 131 of the Bharatiya Nyaya Sanhita (BNS), anyone who assaults or uses criminal force to any person other than on grave and s"
+    },
+    {
+      "id": 26,
+      "question": "What is cheating?",
+      "expected_section": "318",
+      "retrieved_section": "318",
+      "passed": true,
+      "response_time": 3.8,
+      "answer_snippet": "Definition:\nA person who fraudulently induces another to deliver property, consent that they retain it, intentionally induce them to do or omit doing "
+    },
+    {
+      "id": 27,
+      "question": "What is extortion?",
+      "expected_section": "308",
+      "retrieved_section": "308",
+      "passed": true,
+      "response_time": 5.0,
+      "answer_snippet": "Definition:\nExtortion is the dishonest inducement of another person to deliver property by threatening them with injury, death, grievous hurt, an accu"
+    },
+    {
+      "id": 28,
+      "question": "What is culpable homicide?",
+      "expected_section": "100",
+      "retrieved_section": "100",
+      "passed": true,
+      "response_time": 3.87,
+      "answer_snippet": "Definition:\nCulpable homicide refers to an intentional killing of another person by causing their death through a specific act with the intent that it"
+    },
+    {
+      "id": 29,
+      "question": "What is attempt to murder?",
+      "expected_section": "109",
+      "retrieved_section": "109",
+      "passed": true,
+      "response_time": 3.96,
+      "answer_snippet": "Definition:\nAttempting to murder refers to any act committed with specific intent or knowledge that would constitute culpable homicide if such an act "
+    },
+    {
+      "id": 30,
+      "question": "What is information in cognizable cases?",
+      "expected_section": "173",
+      "retrieved_section": "173",
+      "passed": true,
+      "response_time": 4.94,
+      "answer_snippet": "Definition:\nInformation in cognizable cases refers to data provided by a person who has been charged with committing an offense that falls under \"cogn"
+    }
+  ]
+}

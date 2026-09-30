@@ -1,11 +1,15 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8001/api";
+// Use a same-origin path by default. This lets Vite (development) and nginx
+// (Docker production) proxy API traffic without exposing the backend port to
+// the browser. An explicitly configured non-empty VITE_API_URL still wins.
+const configuredApiUrl = import.meta.env.VITE_API_URL?.trim();
+const BASE_URL = configuredApiUrl || "/api";
 
 const api = axios.create({
   baseURL: BASE_URL,
   headers: { "Content-Type": "application/json" },
-  timeout: 15000,
+  timeout: 120000, // 2 minutes to handle longer ML/embedding operations
 });
 
 // Attach JWT + debug log on every request

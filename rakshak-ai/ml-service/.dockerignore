@@ -1,0 +1,14 @@
+__pycache__
+**/__pycache__
+*.pyc
+*.pyo
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+*.egg-info/
+models/*.pkl
+rag/chroma_db/
+notebooks/
+.DS_Store

@@ -1,0 +1,98 @@
+[
+  {
+    "question": "What is robbery?",
+    "intent": "LEGAL",
+    "response_time": 22.99,
+    "sources": [
+      {
+        "source": "BNS.pdf",
+        "page": 81,
+        "section": "309"
+      },
+      {
+        "source": "BNS.pdf",
+        "page": 82,
+        "section": "311"
+      },
+      {
+        "source": "BNS.pdf",
+        "page": 82,
+        "section": "312"
+      }
+    ],
+    "answer": "Definition:\nRobbery is an offence under Section 309 of the Bharatiya Nyaya Sanhita (BNS), 2023, where a person voluntarily causes or attempts to cause death, hurt, wrongful restraint, or fear of instant death/hurt/restraint in order to commit theft or extortion.\n\nApplicable Section:\nSection 309, BNS, 2023.",
+    "status": "PASSED"
+  },
+  {
+    "question": "What is the punishment for murder?",
+    "intent": "LEGAL",
+    "response_time": 5.21,
+    "sources": [
+      {
+        "source": "BNS.pdf",
+        "page": 32,
+        "section": "101"
+      },
+      {
+        "source": "BNS.pdf",
+        "page": 34,
+        "section": "103"
+      },
+      {
+        "source": "BNS.pdf",
+        "page": 34,
+        "section": "104"
+      }
+    ],
+    "answer": "Definition:\nCulpable homicide is defined as intentional killing by a person who acts without any excuse to avoid causing death; this includes intent to kill, knowing injury likely to cause death, or an act where bodily injury would inevitably result in the offender's own death if committed. It also covers cases of self-defense that exceed lawful powers and causes death against one's defenseless opponent, as well as when a person above eighteen years old voluntarily consents to their own death due to youth.\n\nApplicable Section:\nSection 101 (Bharatiya Nyaya Sanhita), Part II\u2014Murder.",
+    "status": "PASSED"
+  },
+  {
+    "question": "Difference between robbery and theft?",
+    "intent": "LEGAL",
+    "response_time": 4.68,
+    "sources": [
+      {
+        "source": "BNS.pdf",
+        "page": 81,
+        "section": "309"
+      },
+      {
+        "source": "BNS.pdf",
+        "page": 79,
+        "section": "304"
+      },
+      {
+        "source": "BNS.pdf",
+        "page": 80,
+        "section": "305"
+      }
+    ],
+    "answer": "Definition:\nRobbery is an intentional act where one person voluntarily causes death, hurt, wrongful restraint, or fear of instant death/hurt/restraint in order to commit theft or extortion against another person's property; it involves the offender putting the victim in such a state that they deliver up the stolen item. Theft is snatching if the thief suddenly seizes movable property without consent from any person or their possession.\n\nApplicable Section:\nSection 309, Bharatiya Nyaya Sanhita (BNS), 2023.",
+    "status": "PASSED"
+  },
+  {
+    "question": "What is Artificial Intelligence?",
+    "intent": "GENERAL",
+    "response_time": 1.25,
+    "sources": [],
+    "answer": "Artificial intelligence (AI) is the field of science that creates systems capable of performing tasks typically requiring human intellect\u2014such as learning from data, recognizing patterns, or making decisions. It's not just about robots; it includes software algorithms designed to help humans solve problems and improve our daily lives!",
+    "status": "PASSED"
+  },
+  {
+    "question": "Who won the Cricket World Cup?",
+    "intent": "GENERAL",
+    "response_time": 1.76,
+    "sources": [],
+    "answer": "Congratulations! The **2019 ICC Cricket World Cup** was held in Australia from July 3 to August 6, 2019. India secured their first-ever gold medal by defeating New Zealand with an innings of 45 runs each against a scoreline of 78-78 (Tally). This historic victory marked the end of India's long-standing dominance and cemented them as champions in that tournament! \ud83c\udfc6\ud83c\uddee\ud83c\uddf3",
+    "status": "PASSED"
+  },
+  {
+    "question": "Hello",
+    "intent": "GENERAL",
+    "response_time": 0.94,
+    "sources": [],
+    "answer": "Hello! How can I assist you today? Whether it's asking for help with something specific, looking up information, or just having a chat\u2014I'm here to be your reliable partner. What would you like to explore? \ud83d\ude0a",
+    "status": "PASSED"
+  }
+]

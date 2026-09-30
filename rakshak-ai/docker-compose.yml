@@ -1,0 +1,129 @@
+services:
+
+  # ── MongoDB ──────────────────────────────────────────────────────────────────
+  mongodb:
+    image: mongo:7.0
+    container_name: rakshak-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: rakshak-ai
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - rakshak-net
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 5
+
+  # ── ML Service ───────────────────────────────────────────────────────────────
+  ml-service:
+    build:
+      context: ./ml-service
+      dockerfile: Dockerfile
+    container_name: rakshak-ml
+    restart: unless-stopped
+    environment:
+      PORT: "8000"
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3.5:0.8b}
+    volumes:
+      # Persist trained model and vector store outside the container
+      - ml_models:/app/models
+      - ml_chroma:/app/rag/chroma_db
+      - ./documents:/app/documents:ro
+    networks:
+      - rakshak-net
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 5
+
+  # ── Ollama ─────────────────────────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: rakshak-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_models:/root/.ollama
+    networks:
+      - rakshak-net
+
+  # ── Backend ──────────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: rakshak-backend
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      ml-service:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    environment:
+      NODE_ENV: production
+      PORT: "8001"
+      # Use Atlas URI if set, otherwise fall back to local MongoDB container
+      MONGODB_URI: ${MONGODB_URI:-mongodb://mongodb:27017/rakshak-ai}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-7d}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      ML_SERVICE_URL: http://ml-service:8000
+      FRONTEND_URL: http://localhost
+    volumes:
+      - backend_uploads:/app/uploads
+    networks:
+      - rakshak-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8001/api/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+
+  # ── Frontend ─────────────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rakshak-frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "80:80"
+    networks:
+      - rakshak-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+# ── Volumes ───────────────────────────────────────────────────────────────────
+volumes:
+  mongodb_data:
+    driver: local
+  ml_models:
+    driver: local
+  ml_chroma:
+    driver: local
+  backend_uploads:
+    driver: local
+  ollama_models:
+    driver: local
+
+# ── Network ───────────────────────────────────────────────────────────────────
+networks:
+  rakshak-net:
+    driver: bridge

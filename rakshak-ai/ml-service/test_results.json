@@ -1,0 +1,187 @@
+{
+  "selected_model": null,
+  "average_response_time": 9.44,
+  "peak_ram_mb": 166.01,
+  "results": [
+    {
+      "question": "What is murder?",
+      "response_time": 31.69,
+      "peak_ram_kb": 169989.16,
+      "checks": {
+        "Response time <15s": false,
+        "No 'Thinking...'": true,
+        "No prompt leakage": true,
+        "Has Definition": true,
+        "Has Applicable Section": true
+      },
+      "answer": "Definition:\nMurder in Indian Penal Code terms refers to culpable homicide where an act by which death or serious bodily harm occurs is done with specific intent (intentional killing) or recklessness that creates a high probability of causing such injury, without any legal excuse for the risk. This includes intentional acts intended to kill someone, reckless acts knowing they are likely to cause death, deliberate injuries known to be fatal in nature, and dangerous circumstances where committing an act would inevitably lead to death with no justification.\n\nApplicable Section:\nSection 101 of The Indian Penal Code (BNS), 2023.",
+      "sources": [
+        {
+          "source": "BNS.pdf",
+          "page": 32,
+          "section": "101"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 34,
+          "section": "103"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 14,
+          "section": "32"
+        }
+      ]
+    },
+    {
+      "question": "What is robbery?",
+      "response_time": 4.96,
+      "peak_ram_kb": 290.83,
+      "checks": {
+        "Response time <15s": true,
+        "No 'Thinking...'": true,
+        "No prompt leakage": true,
+        "Has Definition": true,
+        "Has Applicable Section": true
+      },
+      "answer": "Definition:\nRobbery is an offence under Section 309 of the Bharatiya Nyaya Sanhita (BNS), which occurs when a person voluntarily causes or attempts to cause death, grievous hurt, wrongful restraint, or instant fear of such harm in order to commit theft or extortion. This definition covers both robbery and dacoity where an offender uses violence against another's property while they are under the threat of immediate bodily injury or death.\n\nApplicable Section:\nSection 309 (Robbery) & Section 1(4)(d) [Attempted Robbery].",
+      "sources": [
+        {
+          "source": "BNS.pdf",
+          "page": 81,
+          "section": "309"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 82,
+          "section": "311"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 82,
+          "section": "312"
+        }
+      ]
+    },
+    {
+      "question": "What is assault?",
+      "response_time": 3.46,
+      "peak_ram_kb": 253.48,
+      "checks": {
+        "Response time <15s": true,
+        "No 'Thinking...'": true,
+        "No prompt leakage": true,
+        "Has Definition": true,
+        "Has Applicable Section": true
+      },
+      "answer": "Definition:\nUnder Section 131 of the Bharatiya Nyaya Sanhita (BNS), assault is defined as using criminal force to any person other than on grave and sudden provocation. This offense carries a punishment ranging from imprisonment for up to three months or a fine not exceeding one thousand rupees, with both options available depending on specific circumstances such as the nature of the provocation involved.\n\nApplicable Section:\nSection 131 (Bharatiya Nyaya Sanhita).",
+      "sources": [
+        {
+          "source": "BNS.pdf",
+          "page": 44,
+          "section": "131"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 44,
+          "section": "133"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 44,
+          "section": "135"
+        }
+      ]
+    },
+    {
+      "question": "What is theft?",
+      "response_time": 5.93,
+      "peak_ram_kb": 297.43,
+      "checks": {
+        "Response time <15s": true,
+        "No 'Thinking...'": true,
+        "No prompt leakage": true,
+        "Has Definition": true,
+        "Has Applicable Section": true
+      },
+      "answer": "Definition:\nTheft is defined as intentionally taking dishonestly movable property out of another person's possession without that person's consent; it includes moving an object attached to the earth or severed from it so long as it remains in a state capable of being taken, and also covers snatching by sudden force.\n\nApplicable Section:\nSection 303 (Definition) & Section 304 (Snatching).",
+      "sources": [
+        {
+          "source": "BNS.pdf",
+          "page": 78,
+          "section": "303"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 79,
+          "section": "304"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 80,
+          "section": "305"
+        }
+      ]
+    },
+    {
+      "question": "What is dacoity?",
+      "response_time": 4.34,
+      "peak_ram_kb": 263.22,
+      "checks": {
+        "Response time <15s": true,
+        "No 'Thinking...'": true,
+        "No prompt leakage": true,
+        "Has Definition": true,
+        "Has Applicable Section": true
+      },
+      "answer": "Definition:\nDacoity is defined as five or more persons jointly committing, attempting to commit, or aiding in a robbery under Section 310 of the Bharatiya Nyaya Sanhita (BNS), 2023. This includes those who commit dacoity themselves and accomplices involved in such acts.\n\nApplicable Section:\nSection 310, BNS, 2023.",
+      "sources": [
+        {
+          "source": "BNS.pdf",
+          "page": 82,
+          "section": "310"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 65,
+          "section": "231"
+        },
+        {
+          "source": "BNSS.pdf",
+          "page": 82,
+          "section": "201"
+        }
+      ]
+    },
+    {
+      "question": "What is crime?",
+      "response_time": 6.29,
+      "peak_ram_kb": 458.51,
+      "checks": {
+        "Response time <15s": true,
+        "No 'Thinking...'": true,
+        "No prompt leakage": true,
+        "Has Definition": true,
+        "Has Applicable Section": true
+      },
+      "answer": "Definition:\nSection 2. Definitions (Offence, Crime, etc.) 2.In this Sanhita, unless the context otherwise requires,–– (1) “act” denotes as well a series of acts as a single act; (2) “animal” means any living creature, other than a human being; (3) “child” means any person below the age of eighteen years; (4) “counterfeit”.––A person is said to “counterfeit” who causes one thing to resemble another thing, intending by means of that resemblance to practise deception, or knowing it to be likely that deception will thereby be practised. Explanation 1.—It is not essential to counterfeiting that the imitation s\n\nApplicable Section:\nSection 2(14), Bharatiya Nyaya Sanhita (BNS), 2023.",
+      "sources": [
+        {
+          "source": "BNS.pdf",
+          "page": 2,
+          "section": "2"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 36,
+          "section": "112"
+        },
+        {
+          "source": "BNS.pdf",
+          "page": 44,
+          "section": "134"
+        }
+      ]
+    }
+  ]
+}
