@@ -61,15 +61,29 @@ if (process.env.NODE_ENV === "development") {
 // ── Static uploads ──────────────────────────────────────────────────────────
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// ── Health Check ────────────────────────────────────────────────────────────
-app.get("/api/health", (req, res) => {
+const healthCheck = async (req, res) => {
+  let mlServiceStatus = "unknown";
+  try {
+    const mlUrl = process.env.ML_SERVICE_URL || "http://localhost:8000";
+    const axios = require("axios");
+    const mlRes = await axios.get(`${mlUrl}/health`, { timeout: 3000 });
+    mlServiceStatus = mlRes.data;
+  } catch (err) {
+    mlServiceStatus = "offline";
+  }
+
   res.status(200).json({
+    status: "ok",
     success: true,
     message: "Rakshak AI API is running",
     environment: process.env.NODE_ENV,
     timestamp: new Date().toISOString(),
+    mlService: mlServiceStatus,
   });
-});
+};
+
+app.get("/health", healthCheck);
+app.get("/api/health", healthCheck);
 
 // ── API Routes ──────────────────────────────────────────────────────────────
 app.use("/api/auth", authRoutes);
@@ -88,7 +102,7 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 // ── Start Server (only after DB is ready) ────────────────────────────────────
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8001;
 
 const startServer = async () => {
   await connectDB();
