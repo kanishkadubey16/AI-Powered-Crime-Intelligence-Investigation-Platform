@@ -56,10 +56,9 @@ const evidenceSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Soft-delete filter
-evidenceSchema.pre(/^find/, function (next) {
+// Soft-delete filter - Mongoose v8 compatible (no next param needed)
+evidenceSchema.pre(/^find/, function () {
   this.where({ isDeleted: false });
-  next();
 });
 
 module.exports = mongoose.model("Evidence", evidenceSchema);
