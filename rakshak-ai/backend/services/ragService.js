@@ -1,130 +1,58 @@
-const { GoogleGenAI } = require("@google/genai");
-const fs = require("fs");
-const path = require("path");
+const axios = require("axios");
 
-const genai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-const DOCS_DIR = path.join(__dirname, "../../documents");
-const COLLECTION_NAME = "legal_documents";
+const RAG_URL = process.env.ML_SERVICE_URL || "http://localhost:8000";
+const TIMEOUT_MS = 90000; // 90s — large legal docs + first-request model load
 
-// Lazy ChromaDB client — only connect when actually needed
-const getChromaClient = () => {
-  const { ChromaClient } = require("chromadb");
-  return new ChromaClient({
-    host: "localhost",
-    port: 8002, // ChromaDB default port, separate from our backend
-  });
-};
+console.log("=== Backend ragService initialized ===");
+console.log("ML_SERVICE_URL:", RAG_URL);
+console.log();
 
-const chunkText = (text, size = 800, overlap = 100) => {
-  const chunks = [];
-  let i = 0;
-  while (i < text.length) {
-    chunks.push(text.slice(i, i + size));
-    i += size - overlap;
+const queryLegalDocuments = async (question, options = {}) => {
+  console.log("[Backend] Request received");
+  console.log("=== queryLegalDocuments called ===");
+  const payload = { question };
+  
+  // Pass optional case data if provided
+  if (options.caseData) {
+    payload.case_data = options.caseData;
   }
-  return chunks;
-};
+  if (options.evidenceData) {
+    payload.evidence_data = options.evidenceData;
+  }
+  if (options.firSummary) {
+    payload.fir_summary = options.firSummary;
+  }
 
-const indexDocuments = async () => {
+  console.log("[Backend] Sending request to ML");
+  console.log("Request URL:", `${RAG_URL}/legal-query`);
+  console.log("Request Payload:", JSON.stringify(payload, null, 2));
+  console.log();
+  
   try {
-    const chroma = getChromaClient();
-    const collection = await chroma.getOrCreateCollection({ name: COLLECTION_NAME });
-    const existing = await collection.count();
-    if (existing > 0) {
-      console.log(`✅ RAG: ${existing} chunks already indexed`);
-      return;
-    }
-
-    const pdfFiles = fs.readdirSync(DOCS_DIR).filter((f) => f.endsWith(".pdf"));
-    if (pdfFiles.length === 0) {
-      console.log("⚠️  RAG: No PDFs found in documents folder");
-      return;
-    }
-
-    let pdfParse;
-    try { pdfParse = require("pdf-parse"); } catch {
-      console.log("⚠️  RAG: pdf-parse not installed, skipping indexing");
-      return;
-    }
-
-    let allChunks = [], allIds = [], allMeta = [];
-    for (const file of pdfFiles) {
-      const buffer = fs.readFileSync(path.join(DOCS_DIR, file));
-      const data = await pdfParse(buffer);
-      const chunks = chunkText(data.text);
-      chunks.forEach((chunk, i) => {
-        allChunks.push(chunk);
-        allIds.push(`${file}-${i}`);
-        allMeta.push({ source: file, chunk: i });
-      });
-    }
-
-    const embeddings = [];
-    for (let i = 0; i < allChunks.length; i += 50) {
-      const batch = allChunks.slice(i, i + 50);
-      const results = await Promise.all(
-        batch.map((text) =>
-          genai.models.embedContent({ model: "gemini-embedding-001", contents: text })
-            .then((r) => r.embeddings[0].values)
-        )
-      );
-      embeddings.push(...results);
-    }
-
-    await collection.add({ ids: allIds, embeddings, documents: allChunks, metadatas: allMeta });
-    console.log(`✅ RAG: Indexed ${allChunks.length} chunks from ${pdfFiles.length} documents`);
+    const response = await axios.post(
+      `${RAG_URL}/legal-query`,
+      payload,
+      { timeout: TIMEOUT_MS }
+    );
+    console.log("[Backend] ML Service Response received");
+    console.log("=== ML Service Response ===");
+    console.log("Status Code:", response.status);
+    console.log("Response Data:", JSON.stringify(response.data, null, 2));
+    console.log("\n" + "=".repeat(80));
+    console.log("BACKEND RESPONSE (ragService.js):");
+    console.log("=".repeat(80));
+    console.log(JSON.stringify(response.data, null, 2));
+    console.log();
+    return response.data;
   } catch (err) {
-    // Don't crash the server — RAG is optional
-    console.log("⚠️  RAG: ChromaDB not available, skipping indexing:", err.message.slice(0, 80));
+    console.log("=== ERROR calling ML Service ===");
+    console.log("Error Code:", err.code);
+    console.log("Response Status:", err.response?.status);
+    console.log("Response Data:", JSON.stringify(err.response?.data, null, 2));
+    console.log("Stack Trace:", err.stack);
+    console.log();
+    throw err;
   }
 };
 
-const queryLegalDocuments = async (question) => {
-  try {
-    const chroma = getChromaClient();
-    const collection = await chroma.getCollection({ name: COLLECTION_NAME });
-    const count = await collection.count();
-    if (count === 0) {
-      return "Legal documents have not been indexed yet. Please contact the administrator.";
-    }
-
-    const queryEmbedding = await genai.models.embedContent({
-      model: "gemini-embedding-001",
-      contents: question,
-    });
-
-    const results = await collection.query({
-      queryEmbeddings: [queryEmbedding.embeddings[0].values],
-      nResults: 5,
-    });
-
-    const context = results.documents[0].join("\n\n---\n\n");
-    if (!context.trim()) return "Information not found in uploaded legal documents.";
-
-    const prompt = `You are a legal assistant for Indian law enforcement. Answer the question using ONLY the provided legal document excerpts. If the answer is not in the documents, say exactly: "Information not found in uploaded legal documents."
-
-Legal Document Excerpts:
-${context}
-
-Question: ${question}
-
-Answer:`;
-
-    const result = await genai.models.generateContent({ model: "gemini-2.0-flash", contents: prompt });
-    return result.text;
-  } catch (err) {
-    // Fallback to direct Gemini when ChromaDB is unavailable
-    console.log("⚠️  RAG: ChromaDB unavailable, using direct Gemini:", err.message.slice(0, 60));
-    try {
-      const result = await genai.models.generateContent({
-        model: "gemini-2.0-flash",
-        contents: `You are a legal assistant for Indian law enforcement (IPC, BNS, BNSS, Evidence Act). Answer this question: ${question}`,
-      });
-      return result.text;
-    } catch {
-      return "Information not found in uploaded legal documents.";
-    }
-  }
-};
-
-module.exports = { indexDocuments, queryLegalDocuments };
+module.exports = { queryLegalDocuments };
