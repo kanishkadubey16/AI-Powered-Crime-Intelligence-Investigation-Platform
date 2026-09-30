@@ -1,5 +1,65 @@
 const { Report, Case } = require("../models");
-const { generateInvestigationReport } = require("../services/geminiService");
+const { generateInvestigationReport } = require("../services/ai");
+const { generateReportPDF } = require("../utils/pdfGenerator");
+const path = require("path");
+const fs   = require("fs");
+
+// POST /api/reports/generate-pdf
+const generatePDF = async (req, res, next) => {
+  try {
+    const { caseId } = req.body;
+    if (!caseId) return res.status(400).json({ success: false, message: "caseId is required." });
+
+    const caseDoc = await Case.findById(caseId)
+      .populate("evidence")
+      .populate("filedBy",        "name badgeNumber department role")
+      .populate("assignedOfficer", "name badgeNumber department role")
+      .populate("report");
+
+    if (!caseDoc) return res.status(404).json({ success: false, message: "Case not found." });
+
+    // Use assignedOfficer if available, fall back to filedBy
+    const officer = caseDoc.assignedOfficer || caseDoc.filedBy;
+
+    const pdfBuffer = await generateReportPDF({
+      caseDoc:     caseDoc.toObject(),
+      report:      caseDoc.report || null,
+      officer:     officer ? officer.toObject() : null,
+      generatedAt: new Date(),
+    });
+
+    // Persist PDF to disk and record path in Report document
+    const pdfDir      = path.join(__dirname, "../uploads/reports");
+    fs.mkdirSync(pdfDir, { recursive: true });
+    const filename    = `report-${caseDoc.caseNumber}-${Date.now()}.pdf`;
+    const pdfPath     = path.join(pdfDir, filename);
+    fs.writeFileSync(pdfPath, pdfBuffer);
+    const relativePath = `/uploads/reports/${filename}`;
+
+    // Upsert Report document with pdfPath
+    await Report.findOneAndUpdate(
+      { caseId },
+      {
+        caseId,
+        title:       `Investigation Report — ${caseDoc.caseNumber}`,
+        type:        "case_summary",
+        generatedBy: req.user._id,
+        aiGenerated: true,
+        status:      "final",
+        pdfPath:     relativePath,
+      },
+      { upsert: true, new: true }
+    );
+
+    // Stream PDF directly to client
+    res.setHeader("Content-Type",        "application/pdf");
+    res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
+    res.setHeader("Content-Length",      pdfBuffer.length);
+    res.send(pdfBuffer);
+  } catch (err) {
+    next(err);
+  }
+};
 
 // GET /api/reports
 const getReports = async (req, res, next) => {
@@ -110,4 +170,4 @@ const downloadReport = async (req, res, next) => {
   }
 };
 
-module.exports = { getReports, getReportById, generateReport, updateReport, deleteReport, downloadReport };
+module.exports = { getReports, getReportById, generateReport, updateReport, deleteReport, downloadReport, generatePDF };
